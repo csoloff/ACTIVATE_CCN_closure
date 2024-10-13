@@ -10,7 +10,7 @@ This file contains the python environment which I used to run my scripts. To rep
 
 ### `/tables`
 
-CSV tables exported from scripts
+CSV tables exported from scripts.
 
 ### `/scripts`
 
