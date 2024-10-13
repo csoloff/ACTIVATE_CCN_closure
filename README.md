@@ -23,3 +23,11 @@ This script merges the data into a single table and saves it as a CSV in the `/t
 #### `closure_funcs.py`
 
 This script contains the functions used to calculate activation diameter and kappa. These functions are imported into the relevant Jupyter notebooks.
+
+#### `/scripts/dev_scripts`
+
+This folder contains scripts more in the development stage.
+
+##### `archived_plots.ipynb`
+
+This script contains plots which are in development.
