@@ -12,4 +12,6 @@ This file contains the python environment which I used to run my scripts. To rep
 
 This file contains the functions used to calculate activation diameter and kappa.
 
-#### `scripts`
+### `/scripts`
+
+#### `file_merger.ipynb`
