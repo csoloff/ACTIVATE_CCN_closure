@@ -12,9 +12,11 @@ Contains the scripts which I run to perform closure analysis. Numbers provided a
 
 This script merges the data into a single table and saves it as a CSV in the `/tables` folder.
 
-### `closure_funcs.py`
+#### `closure_funcs.py`
 
 This script contains the functions used to calculate activation diameter and kappa. These functions are imported into the relevant Jupyter notebooks.
+
+---
 
 ### `requirements.txt`
 
