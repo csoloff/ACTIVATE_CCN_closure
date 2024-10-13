@@ -16,8 +16,6 @@ This script merges the data into a single table and saves it as a CSV in the `/t
 
 This script contains the functions used to calculate activation diameter and kappa. These functions are imported into the relevant Jupyter notebooks.
 
----
-
 ### `requirements.txt`
 
 This file contains the python environment which I used to run my scripts. To reproduce the results, create a virtual environment with Python version 3.11.1 and the requirements from this document to ensure the code runs.
