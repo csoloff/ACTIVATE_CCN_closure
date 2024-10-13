@@ -11,3 +11,5 @@ This file contains the python environment which I used to run my scripts. To rep
 ### `closure_funcs.py`
 
 This file contains the functions used to calculate activation diameter and kappa.
+
+#### `scripts`
