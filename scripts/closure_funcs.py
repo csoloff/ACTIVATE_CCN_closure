@@ -56,6 +56,6 @@ def find_k(s, D_d):
         '''
         return find_critical_ss(D_d, k) - s
 
-    result = root_scalar(find_ss_diff, bracket=[0.001, 3.0])
+    result = root_scalar(find_ss_diff, bracket=[.02, 3.0])
 
     return result.root
