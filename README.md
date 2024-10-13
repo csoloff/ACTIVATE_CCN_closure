@@ -1,4 +1,4 @@
-# ACTIVATE_CCN_closure
+# `ACTIVATE_CCN_closure`
 
 This repository contains the scripts used to perform CCN closure on the NASA ACTIVATE dataset.
 
