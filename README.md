@@ -6,7 +6,7 @@ This repository contains the scripts used to perform CCN closure on the NASA ACT
 
 ### `requirements.txt`
 
-This file contains the python environment which I used to run my scripts. To reproduce the results, create a virtual environment with Python version 3.13.0 and the requirements from this document to ensure the code runs.
+This file contains the Python environment which I used to run my scripts. To reproduce the results, create a virtual environment with Python version 3.13.0 and the requirements from this document to ensure the code runs.
 
 Python 3.13.0 is available for download at [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
