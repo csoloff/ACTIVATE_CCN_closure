@@ -18,11 +18,11 @@ source ccn_closure/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-### `/tables`
+### `./tables`
 
 Directory for CSV tables exported from scripts.
 
-### `/scripts`
+### `./scripts`
 
 Contains the scripts which I run to perform closure analysis. Numbers provided at beginning of file name to specify the order which files should be run. When the numbers are the same, it means the scripts can be run concurrently as long as the preceding scripts were run.
 
