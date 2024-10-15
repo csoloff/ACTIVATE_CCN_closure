@@ -12,15 +12,13 @@ Python 3.13.0 is available for download at [https://www.python.org/downloads/](h
 
 To create a virtual environment called `ccn_closure` using the `requirements.txt` file for a UNIX system, navigate to the directory of the project and run the following commands consecutively.
 
-```
-python -m venv ccn_closure
-source ccn_closure/bin/activate
-python -m pip install -r requirements.txt
-```
+`python -m venv ccn_closure`
+`source ccn_closure/bin/activate`
+`python -m pip install -r requirements.txt`
 
 ### `/tables`
 
-CSV tables exported from scripts.
+Directory for CSV tables exported from scripts.
 
 ### `/scripts`
 
