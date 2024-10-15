@@ -2,11 +2,7 @@
 
 This repository contains the scripts used to perform CCN closure on the NASA ACTIVATE dataset.
 
-## Files
-
-### `requirements.txt`
-
-This file contains the Python environment which I used to run my scripts. To reproduce the results, create a virtual environment with Python version 3.13.0 and the requirements from this document to ensure the code runs.
+## Setting up virtual environment
 
 Python 3.13.0 is available for download at [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
@@ -18,9 +14,19 @@ source ccn_closure/bin/activate
 python -m pip install -r requirements.txt
 ```
 
+## Files
+
+### `requirements.txt`
+
+This file contains the Python environment which I used to run my scripts. To reproduce the results, create a virtual environment with Python version 3.13.0 and the requirements from this document to ensure the code runs.
+
 ### `./tables`
 
 Directory for CSV tables exported from scripts.
+
+### `./figures`
+
+Directory for saving figures exported from the scripts.
 
 ### `./scripts`
 
@@ -42,7 +48,7 @@ This script calculates the predicted CCN concentration given the kappa values of
 
 This script contains the functions used to calculate activation diameter and kappa. These functions are imported into the relevant Jupyter notebooks.
 
-#### `/scripts/dev_scripts`
+#### `./scripts/dev_scripts`
 
 This folder contains scripts more in the development stage.
 
