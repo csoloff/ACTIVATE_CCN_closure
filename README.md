@@ -4,7 +4,9 @@ This repository contains the scripts used to perform CCN closure on the NASA ACT
 
 ## Setting up virtual environment
 
-Python 3.13.0 is available for download at [https://www.python.org/downloads/](https://www.python.org/downloads/).
+To reproduce the results, create a virtual environment with Python and install the requirements from the `requirements.txt` document to ensure the code runs successfully.
+
+This project uses Python 3.13.0 which is available for download at [https://www.python.org/downloads/](https://www.python.org/downloads/).
 
 To create a virtual environment called `ccn_closure` using the `requirements.txt` file for a UNIX system, navigate to the directory of the project and run the following commands consecutively.
 
@@ -16,13 +18,9 @@ python -m pip install -r requirements.txt
 
 ## Files
 
-### `requirements.txt`
+### `data`
 
-This file contains the Python environment which I used to run my scripts. To reproduce the results, create a virtual environment with Python version 3.13.0 and the requirements from this document to ensure the code runs.
-
-### `./tables`
-
-Directory for CSV tables exported from scripts.
+This is the directory to put the data from the ACTIVATE mission. The data can be downloaded from the NASA LaRC Suborbital Science Data for Atmospheric Composition website: [https://www-air.larc.nasa.gov/missions/activate/index.html](https://www-air.larc.nasa.gov/missions/activate/index.html).
 
 ### `./figures`
 
@@ -55,3 +53,11 @@ This folder contains scripts more in the development stage.
 ##### `archived_plots.ipynb`
 
 This script contains plots which are in development.
+
+### `./tables`
+
+Directory for CSV tables exported from scripts.
+
+### `requirements.txt`
+
+This file contains the Python environment which I used to run my scripts.
