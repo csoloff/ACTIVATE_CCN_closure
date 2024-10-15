@@ -17,15 +17,15 @@ python -m pip install -r requirements.txt
 ```
 
 ## Files
-
+--
 ### `data`
 
 This is the directory to put the data from the ACTIVATE mission. The data can be downloaded from the NASA LaRC Suborbital Science Data for Atmospheric Composition website: [https://www-air.larc.nasa.gov/missions/activate/index.html](https://www-air.larc.nasa.gov/missions/activate/index.html).
-
+--
 ### `./figures`
 
 Directory for saving figures exported from the scripts.
-
+--
 ### `./scripts`
 
 Contains the scripts which I run to perform closure analysis. Numbers provided at beginning of file name to specify the order which files should be run. When the numbers are the same, it means the scripts can be run concurrently as long as the preceding scripts were run.
@@ -45,7 +45,7 @@ This script calculates the predicted CCN concentration given the kappa values of
 #### `closure_funcs.py`
 
 This script contains the functions used to calculate activation diameter and kappa. These functions are imported into the relevant Jupyter notebooks.
-
+--
 #### `./scripts/dev_scripts`
 
 This folder contains scripts more in the development stage.
@@ -53,11 +53,12 @@ This folder contains scripts more in the development stage.
 ##### `archived_plots.ipynb`
 
 This script contains plots which are in development.
-
+--
 ### `./tables`
 
 Directory for CSV tables exported from scripts.
-
+--
 ### `requirements.txt`
 
 This file contains the Python environment which I used to run my scripts.
+--
