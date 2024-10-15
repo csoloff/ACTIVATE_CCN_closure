@@ -19,7 +19,7 @@ python -m pip install -r requirements.txt
 ## Files
 
 ---
-### `data`
+### `./data`
 
 This is the directory to put the data from the ACTIVATE mission. The data can be downloaded from the NASA LaRC Suborbital Science Data for Atmospheric Composition website: [https://www-air.larc.nasa.gov/missions/activate/index.html](https://www-air.larc.nasa.gov/missions/activate/index.html).
 
