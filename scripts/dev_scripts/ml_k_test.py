@@ -9,12 +9,14 @@ from sklearn.metrics import mean_squared_error
 
 # Load and preprocess data
 d = pd.read_csv('./tables/merged_observed.csv')
+
 d = d[np.logical_not((d['Ice_Flag_2DS']==1) | (d['ED-liquid_2DS']>=60E-6) | (d['LWC_FCDP']>0.005) | (d['ams_tot'] < 0.04) | (d['N_CCN_stdPT'] < 50))].reset_index(drop=True)
 d = d[(d['Org_Ave_IsoK_STP']>=0) & (d['SO4_Ave_IsoK_STP']>=0) & (d['NO3_Ave_IsoK_STP']>=0) & (d['NH4_Ave_IsoK_STP']>=0) & (d['Chl_Ave_IsoK_STP']>=0)].reset_index(drop=True)
-d = d.dropna(subset=['k_obs'])
+
+d = d.dropna(subset=['k_obs', 'CO_ppm'])
 
 d = d[(d['k_obs']>0.0)&(d['k_obs']<.05)]
-
+'''
 # Define the function to calculate 'k' values based on given kappas
 def calc_k(data, org_k, so4_k, no3_k, nh4_k, chl_k):
     d = data.copy()
@@ -59,10 +61,10 @@ plt.xlabel('Observed k')
 plt.ylabel('Predicted k (optimized)')
 #plt.xlim([0, 0.18])
 plt.show()
-
+'''
 # Machine Learning Component - Predicting 'k_obs' with Gradient Boosting Regressor
 # Define feature columns
-feature_cols = ['Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP']
+feature_cols = ['Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP', 'CO_ppm']#'Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP', 
 X = d[feature_cols]
 y = d['k_obs']
 
@@ -70,7 +72,7 @@ y = d['k_obs']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Train the model
-model = RandomForestRegressor()#GradientBoostingRegressor(random_state=42)
+model = GradientBoostingRegressor(random_state=42)
 model.fit(X_train, y_train)
 
 # Predict and evaluate
