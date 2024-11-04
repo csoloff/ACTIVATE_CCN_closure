@@ -15,7 +15,7 @@ d = d[(d['Org_Ave_IsoK_STP']>=0) & (d['SO4_Ave_IsoK_STP']>=0) & (d['NO3_Ave_IsoK
 
 d = d.dropna(subset=['k_obs', 'CO_ppm'])
 
-d = d[(d['k_obs']>0.0)&(d['k_obs']<.05)]
+#d = d[(d['k_obs']>0.0)&(d['k_obs']<.05)]
 '''
 # Define the function to calculate 'k' values based on given kappas
 def calc_k(data, org_k, so4_k, no3_k, nh4_k, chl_k):
@@ -64,7 +64,7 @@ plt.show()
 '''
 # Machine Learning Component - Predicting 'k_obs' with Gradient Boosting Regressor
 # Define feature columns
-feature_cols = ['Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP', 'CO_ppm']#'Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP', 
+feature_cols = ['Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP']#'Org_Ave_IsoK_STP', 'SO4_Ave_IsoK_STP', 'NO3_Ave_IsoK_STP', 'NH4_Ave_IsoK_STP', 'Chl_Ave_IsoK_STP', 
 X = d[feature_cols]
 y = d['k_obs']
 
