@@ -41,9 +41,41 @@ This script merges the data into a single table and saves it as a CSV in the `/t
 
 This script uses `closure_funcs.py` to find the activation diameter observed from the data and the corresponding kappa value implied for the given CCN instrument supersaturation.
 
+#### `03_AMS_fit_only_OMF.ipynb`
+
+Attempts to fit observed kappa with calculated kappa from AMS. Treats non-organics as one species.
+
+#### `03_AMS_fit.ipynb`
+
+Attempts to fit observed kappa with calculated kappa from AMS.
+
+#### `03_closure_calc_CO.ipynb`
+
+Calculates predicted CCN concentration using CO as a proxy for aerosol chemistry.
+
+#### `03_closure_calc_E3SM_non_org.ipynb`
+
+This script calculates the predicted CCN concentration given the kappa values of the E3SM model and the volume fractions from the AMS. Treats non-organics as one species.
+
 #### `03_closure_calc_E3SM.ipynb`
 
 This script calculates the predicted CCN concentration given the kappa values of the E3SM model and the volume fractions from the AMS.
+
+#### `03_closure_calc_fit_k.ipynb`
+
+This script calculates the predicted CCN concentration given the kappa values of the observed kappa fit and the volume fractions from the AMS. Treats non-organics as one species.
+
+#### `03_closure_calc_single_k.ipynb`
+
+This script calculates the predicted CCN concentration given a single kappa values and the volume fractions from the AMS. Treats non-organics as one species.
+
+#### `04_map_plot.ipynb`
+
+Plot results on map.
+
+#### `04_plots.ipynb`
+
+Plot results.
 
 #### `closure_funcs.py`
 
@@ -57,6 +89,26 @@ This folder contains scripts more in the development stage.
 ##### `archived_plots.ipynb`
 
 This script contains plots which are in development.
+
+##### `compare_closure_calc_E3SM.ipynb`
+
+This script was used to diagnose an issue I was having with particle integration.
+
+##### `compare_find_obs_kappa.ipynb`
+
+Diagnostic script.
+
+##### `compare_func.ipynb`
+
+Used to compare a different method for solving Köhler theory.
+
+##### `compare.ipynb`
+
+Used to assess the performance of leg mean closure.
+
+##### `ml_k_test.ipynb`
+
+A test to see if k_obs can be predicted with machine learning with AMS values as input.
 
 ---
 ### `./tables`
