@@ -9,7 +9,7 @@ def S_func(D, D_d, k):
     :param k: kappa
     :return: Saturation
     '''
-    A = 2.1e-09 # constant
+    A = 2.3e-09 # constant 4*0.072*0.0180153/(8.3144598*273.15*1000)
     
     # cube diameters
     D3 = D**3
@@ -38,7 +38,7 @@ def find_d_act(s, k):
         '''
         return find_critical_ss(D_d, k) - s
 
-    result = root_scalar(find_ss_diff, bracket=[1e-9, 900e-9])
+    result = root_scalar(find_ss_diff, method='brentq', bracket=[1e-9, 900e-9])
 
     return result.root * 1e9
 def find_k(s, D_d):
