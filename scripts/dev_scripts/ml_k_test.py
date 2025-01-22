@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error
 
 # Load and preprocess data
-d = pd.read_csv('./tables/merged_observed.csv')
+d = pd.read_csv('./tables/merged_final_non_org_fixed.csv')
 
 d = d[np.logical_not((d['Ice_Flag_2DS']==1) | (d['ED-liquid_2DS']>=60E-6) | (d['LWC_FCDP']>0.005) | (d['ams_tot'] < 0.04) | (d['N_CCN_stdPT'] < 50))].reset_index(drop=True)
 d = d[(d['Org_Ave_IsoK_STP']>=0) & (d['SO4_Ave_IsoK_STP']>=0) & (d['NO3_Ave_IsoK_STP']>=0) & (d['NH4_Ave_IsoK_STP']>=0) & (d['Chl_Ave_IsoK_STP']>=0)].reset_index(drop=True)
