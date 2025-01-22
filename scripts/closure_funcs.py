@@ -9,7 +9,7 @@ def S_func(D, D_d, k):
     :param k: kappa
     :return: Saturation
     '''
-    A = 2.3e-09 # constant 4*0.072*0.0180153/(8.3144598*273.15*1000)
+    A = 2.28454e-09 # constant 4*0.072*0.0180153/(8.3144598*273.15*1000) # 2.1e-09
     
     # cube diameters
     D3 = D**3
